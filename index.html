@@ -3,10 +3,22 @@
 
 <body>
 
-    <video id="sole" width="100%" autoplay>
+    <div style="text-align:center">
+        <button onclick="playPause()">Play/Pause</button>
+    </div>
+
+    <video id="sole" width="0%">
         <source src="sole.mp4" type="video/mp4">
     </video>
+    <script>
+        var myVideo = document.getElementById("sole");
 
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+                myVideo.width = 1920;
+        }
+    </script>
 </body>
 
 </html>
